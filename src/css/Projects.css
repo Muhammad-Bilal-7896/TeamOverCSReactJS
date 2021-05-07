@@ -1,0 +1,152 @@
+.nav-tabs {
+    border: none;
+    font-size: 60px;
+}
+
+.tabstitle {
+    border-bottom: 2px solid #e0b761;
+    margin-left: 2%;
+}
+
+.active {}
+
+#ex1 {
+    border-bottom: none;
+}
+
+#ex3-tab-1, #ex3-tab-2, #ex3-tab-3, #ex3-tab-4, #ex3-tab-5 {
+    font-size: 18px;
+    text-transform: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+/* Ye */
+
+@keyframes movingTopToBottom {
+    0% {
+        top: -100px;
+    }
+    95% {
+        top: 0x;
+    }
+    100% {
+        top: 50x;
+    }
+}
+
+.txtwrapper {
+    animation: movingTopToBottom 0.3s linear;
+    background: lightblue;
+    display: none;
+    font-size: 35px;
+    color: #ffffff !important;
+    font-family: sans-serif;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #34495e;
+    height: 80px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 999;
+}
+
+#logo {
+    height: 80px;
+    margin-left: 20px;
+}
+
+.wrapper {
+    padding: 50px 50px;
+    max-width: 1200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+
+.right {
+    float: right !important;
+}
+
+/* Image zoom on hover + Overlay colour */
+
+.parent {
+    width: 100%;
+    margin: 20px;
+    height: 300px;
+    border: 1px solid blue;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.child {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.child img {
+    width: 100%;
+    height: 300px;
+    transition: 0.5s all ease-in-out;
+}
+
+.child:hover img {
+    transform: scale(1.5);
+    height: 300px;
+}
+
+.parent:hover .child, .parent:focus .child {}
+
+.parent:hover .child:before, .parent:focus .child:before {
+    display: block;
+}
+
+.parent:hover .txtwrapper, .parent:focus .txtwrapper {
+    display: block;
+}
+
+.child:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 73, 94, 0.75);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 960px) {
+    .parent {
+        width: 100%;
+        margin: 20px 0px
+    }
+    .wrapper {
+        padding: 20px 20px;
+    }
+}
+
+.hello {
+    display: none
+}
+
+/* Ye */
