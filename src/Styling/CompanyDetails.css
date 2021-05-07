@@ -1,0 +1,20 @@
+.cd .cr {
+    background: url('http://galleriadesign.pk/images/background.png');
+    padding-bottom: 70px;
+    padding-top: 65px;
+}
+.cd .cr .ct
+{
+    text-align: center;
+}
+.count
+{
+    font-weight: bold;
+    font-size: 60px;
+    font-family: serif;
+    color: #000;
+}
+.countp
+{
+    color: #868686;
+}
