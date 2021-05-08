@@ -60,11 +60,9 @@ const Services = (props) => {
 
             <div className="bgimg-1">
                 <div className="caption">
-                    <h1 className="TitleCarousal"><b>Services</b></h1>
+                    <h1 className="TitleCarousal">OUR SERVICES</h1>
                     <div className="disc_top_width">
-                        <h3 className="DiscCarousal">As a complete architectural design &
-                        construction firm, AAA offers all services
-                            custom-tailored to your needs</h3>
+                        <h3 className="DiscCarousal">Home / Services</h3>
                     </div>
                 </div>
             </div>

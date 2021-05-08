@@ -60,8 +60,8 @@ const AboutUsPage = (props) => {
             <div className="bgimg-1">
                 <div className="caption">
                     <div className="disc_top_width">
-                        <h1 className="TitleCarousal"><b>Our Story</b></h1>
-                        <h3 className="DiscCarousal">We build what others don’t dare to</h3>
+                        <h1 className="TitleCarousal">ABOUT US</h1>
+                        <h3 className="DiscCarousal">Home / About us</h3>
                     </div>
                 </div>
             </div>

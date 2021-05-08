@@ -32,18 +32,23 @@
 }
 
 .bgimg-1 {
-    background-image: url("../assets/about-us-banner.jpg");
-    height: 100vh;
+    background-image: url("http://galleriadesign.pk/images/about_bg.jpg");
+    height: 40vh;
     top: 0%;
 }
-
-.caption {
+.bgimg-1::after
+{
+    content: '';
     position: absolute;
-    left: 0;
-    top: 45%;
-    width: 100%;
-    text-align: center;
-    color: #000;
+    width: 100%; 
+    height:100%;
+    top:0; 
+    left:0;
+    background:rgba(0,0,0,0.5);
+    opacity: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
 }
 
 .caption {
@@ -53,6 +58,12 @@
     font-size: 30px;
     letter-spacing: 10px;
     font: 600 15px/1.8 "Lato", sans-serif;
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
 }
 
 /* For background image */

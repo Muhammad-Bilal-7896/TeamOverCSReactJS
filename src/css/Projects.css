@@ -136,7 +136,7 @@ border: 1px solid black;
 /* Ye */
 
 
-/* Naya */
+/* This code is copied from galleria design website */
 
 #name {
     color: #FFF;
@@ -461,6 +461,15 @@ border: 1px solid black;
       padding: 50px 0 !important;
       text-align: center;
     }
+    .portfolio li {
+      width: 48%;
+    }
+  }
+  @media all and (max-width:668px)
+  {
+    .portfolio li {
+      width: 100%;
+    }
   }
   .projects #projects_element .project_item {
     padding: 0 20px;
@@ -592,4 +601,4 @@ border: 1px solid black;
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
-/* Naya */
+ /* This code is copied from galleria design website */

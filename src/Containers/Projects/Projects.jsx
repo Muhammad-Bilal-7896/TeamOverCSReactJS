@@ -61,9 +61,7 @@ const Projects = (props) => {
                 <div className="caption">
                     <h1 className="TitleCarousal"><b>Projects</b></h1>
                     <div className="disc_top_width">
-                        <h3 className="DiscCarousal">As a complete architectural design &
-                        construction firm, AAA offers all services
-                            custom-tailored to your needs</h3>
+                        <h3 className="DiscCarousal">Home / Projects</h3>
                     </div>
                 </div>
             </div>
@@ -71,7 +69,7 @@ const Projects = (props) => {
             <div className="container">
                 <br />
                 {/* Tabs navs */}
-                <ul className="nav nav-tabs mb-3" id="ex1" role="tablist">
+                <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
                     <li style={{ marginLeft: "0px" }} className="nav-item tabstitle" role="presentation">
                         <a className="nav-link active" id="ex3-tab-1" data-mdb-toggle="tab" href="#ex3-tabs-1" role="tab" aria-controls="ex3-tabs-1" aria-selected="true">All</a>
                     </li>
@@ -151,46 +149,22 @@ const Projects = (props) => {
                                         <h3 className="InfoBlock">Commercial Interior<br /><span className="info"></span></h3><figcaption><a href="#com-i7" id="fp">+</a></figcaption>
                                     </figure>
                                 </li>
-                                <li className="Commercial-Interior">
+                                <li className="Commercial-Exterior">
                                     <figure>
-                                        <img src="images/projects/new/com-i/8.jpg" />
-                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> Future Designs Tile Showroom </span></h3><figcaption><a href="#com-i8" id="fp">+</a></figcaption>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Exterior<br /><span className="info"></span></h3><figcaption><a href="#com-e7" id="fp">+</a></figcaption>
                                     </figure>
                                 </li>
                                 <li className="Commercial-Interior">
                                     <figure>
-                                        <img src="images/projects/new/com-i/9.jpg" />
-                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> Govt Office Meeting Room </span></h3><figcaption><a href="#com-i9" id="fp">+</a></figcaption>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i4" id="fp">+</a></figcaption>
                                     </figure>
                                 </li>
                                 <li className="Commercial-Interior">
                                     <figure>
-                                        <img src="images/projects/new/com-i/10.jpg" />
-                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> Govt Office Meeting Room </span></h3><figcaption><a href="#com-i10" id="fp">+</a></figcaption>
-                                    </figure>
-                                </li>
-                                <li className="Commercial-Interior">
-                                    <figure>
-                                        <img src="images/projects/new/com-i/11.jpg" />
-                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> Samira Umer Salon </span></h3><figcaption><a href="#com-i11" id="fp">+</a></figcaption>
-                                    </figure>
-                                </li>
-                                <li className="Commercial-Interior">
-                                    <figure>
-                                        <img src="images/projects/new/com-i/12.jpg" />
-                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> Samira Umer Salon </span></h3><figcaption><a href="#com-i12" id="fp">+</a></figcaption>
-                                    </figure>
-                                </li>
-                                <li className="Commercial-Interior">
-                                    <figure>
-                                        <img src="images/projects/new/com-i/13.jpg" />
-                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> Tile Showroom Interior </span></h3><figcaption><a href="#com-i13" id="fp">+</a></figcaption>
-                                    </figure>
-                                </li>
-                                <li className="Commercial-Interior">
-                                    <figure>
-                                        <img src="images/projects/new/com-i/14.jpg" />
-                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> Tile Showroom Interior </span></h3><figcaption><a href="#com-i14" id="fp">+</a></figcaption>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/4.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"></span></h3><figcaption><a href="#com-i7" id="fp">+</a></figcaption>
                                     </figure>
                                 </li>
                             </ul>
@@ -198,16 +172,172 @@ const Projects = (props) => {
                         {/* Ye */}
                     </div>
                     <div className="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
-                        Tab 2 content
+                    <div>
+                            <ul className="portfolio">
+                                <li className="Residential-Exterior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/res-e/8.jpg" />
+                                        <h3 className="InfoBlock">Residential Exterior<br /><span className="info"> 2 Kanal </span></h3><figcaption><a href="#res-e8" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/2.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i2" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/3.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i3" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Exterior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Exterior<br /><span className="info"></span></h3><figcaption><a href="#com-e7" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i4" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/4.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"></span></h3><figcaption><a href="#com-i7" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
-                        Tab 3 content
+                    <div>
+                            <ul className="portfolio">
+                                <li className="Residential-Exterior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/res-e/8.jpg" />
+                                        <h3 className="InfoBlock">Residential Exterior<br /><span className="info"> 2 Kanal </span></h3><figcaption><a href="#res-e8" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/2.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i2" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/3.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i3" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Exterior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Exterior<br /><span className="info"></span></h3><figcaption><a href="#com-e7" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i4" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/4.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"></span></h3><figcaption><a href="#com-i7" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="tab-pane fade" id="ex3-tabs-4" role="tabpanel" aria-labelledby="ex3-tab-4">
-                        Tab 4 content
+                    <div>
+                            <ul className="portfolio">
+                                <li className="Residential-Exterior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/res-e/8.jpg" />
+                                        <h3 className="InfoBlock">Residential Exterior<br /><span className="info"> 2 Kanal </span></h3><figcaption><a href="#res-e8" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/2.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i2" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/3.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i3" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Exterior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Exterior<br /><span className="info"></span></h3><figcaption><a href="#com-e7" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i4" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/4.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"></span></h3><figcaption><a href="#com-i7" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="tab-pane fade" id="ex3-tabs-5" role="tabpanel" aria-labelledby="ex3-tab-5">
-                        Tab 5 content
+                    <div>
+                            <ul className="portfolio">
+                                <li className="Residential-Exterior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/res-e/8.jpg" />
+                                        <h3 className="InfoBlock">Residential Exterior<br /><span className="info"> 2 Kanal </span></h3><figcaption><a href="#res-e8" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/2.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i2" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/3.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i3" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Exterior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Exterior<br /><span className="info"></span></h3><figcaption><a href="#com-e7" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-e/7.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"> 6th Sense Headoffice </span></h3><figcaption><a href="#com-i4" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                                <li className="Commercial-Interior">
+                                    <figure>
+                                        <img src="http://galleriadesign.pk/images/projects/new/com-i/4.jpg" />
+                                        <h3 className="InfoBlock">Commercial Interior<br /><span className="info"></span></h3><figcaption><a href="#com-i7" id="fp">+</a></figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 {/* Tabs content */}
