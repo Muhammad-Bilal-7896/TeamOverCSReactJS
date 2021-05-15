@@ -6,6 +6,7 @@ import AboutUsPage from '../Containers/About/AboutUsPage';
 import Services from '../Containers/Services/Services';
 import Projects from '../Containers/Projects/Projects';
 import Certification from "../Containers/Certification/Certification";
+import Contact from "../Containers/Contact/Contact";
 
 class AppRouter extends React.Component {
     render() {
@@ -16,6 +17,7 @@ class AppRouter extends React.Component {
                 <Route exact path="/services" component={Services} />
                 <Route exact path="/projects" component={Projects} />
                 <Route exact path="/certification" component={Certification} />
+                <Route exact path="/contact" component={Contact} />
             </Router>
         )
     }

@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { connect } from "react-redux";
 import { setTodoList } from '.././store/action/index';
@@ -85,13 +85,13 @@ const Navbar = (props) => {
                                 <Link to="/projects" className="nav-link t-none">OUR PROJECTS</Link>
                             </li>
                             <li className="nav-item">
-                                <span onClick={() => handleRowClick()} className="nav-link t-none">OUR CERTIFICATION</span>
+                                <Link to="/certification" className="nav-link t-none">OUR CERTIFICATION</Link>
                             </li>
                             <li className="nav-item">
-                                <span onClick={() => handleRowClick()} className="nav-link t-none">CONTACT US</span>
+                                <Link to="/contact" className="nav-link t-none">CONTACT US</Link>
                             </li>
                             <li className="nav-item">
-                                <span onClick={() => handleRowClick()} className="nav-link t-none">COMPANY PROFILE</span>
+                                <Link to="/cp" className="nav-link t-none">COMPANY PROFILE</Link>
                             </li>
                         </ul>
                         {/* Left links */}

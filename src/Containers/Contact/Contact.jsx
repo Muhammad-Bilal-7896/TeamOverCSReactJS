@@ -9,9 +9,9 @@ import img3 from "../../assets/how-we-work.JPEG XR";
 // importing images
 
 import { Link, useHistory } from "react-router-dom"
-import '../../css/Certification.css';
+import '../../css/Contact.css';
 
-const Certification = (props) => {
+const Contact = (props) => {
     const history = useHistory();
     const handleRowClick = () => {
         history.push(`/docs`);
@@ -59,46 +59,15 @@ const Certification = (props) => {
 
             <div className="bgimg-1">
                 <div className="caption">
-                    <h1 className="TitleCarousal"><b>OUR CERTIFICATIONS</b></h1>
+                    <h1 className="TitleCarousal"><b>Contact Us</b></h1>
                     <div className="disc_top_width">
-                        <h3 className="DiscCarousal">Home / Certifications</h3>
+                        <h3 className="DiscCarousal">Home / Contact Us</h3>
                     </div>
                 </div>
             </div>
             {/* Projects section */}
             <div className="container">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                {/* The Content will be placed here for certification */}
-                <div className="row">
-                    <div className="col-md-4 col-sm-12 certificationDiv">
-                        <figure><img className="imgCertificate" src="http://galleriadesign.pk/images/certificates/1.jpg" /></figure>
-                        <p className="text-center mt-3">Certified Professional Engineer Mr. Abdul Rauf Pakistan Engineering Council, 5 Dec, 2000</p>
-                    </div>
-                    <div className="col-md-4 col-sm-12 certificationDiv">
-                        <figure><img className="imgCertificate" src="http://galleriadesign.pk/images/certificates/2.jpg" /></figure>
-                        <p className="text-center mt-3">Registered Mr. Ghulam Dastgir as a Life Member on 3rd June,2008.</p>
-                    </div>
-                    <div className="col-md-4 col-sm-12 certificationDiv">
-                        <figure><img className="imgCertificate" src="http://galleriadesign.pk/images/certificates/3.jpg" /></figure>
-                        <p className="text-center mt-3">Registered Mr.Ghulam Dastgir as an Architect on 24th June,2006.</p>
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-md-4 col-sm-12 certificationDiv">
-                        <figure><img className="imgCertificate" src="http://galleriadesign.pk/images/certificates/5.jpg" /></figure>
-                        <p className="text-center mt-3">Membership Certificate</p>
-                    </div>
-                    <div className="col-md-4 col-sm-12 certificationDiv">
-                        <figure><img className="imgCertificate" src="http://galleriadesign.pk/images/certificates/4.jpg" /></figure>
-                        <p className="text-center mt-3">Capital Development Authority.</p>
-                    </div>
-                </div>
-                {/* The Content will be placed here for certification */}
+                <h1>Contact Page</h1>
             </div>
 
             <br />
@@ -109,4 +78,4 @@ const Certification = (props) => {
     )
 }
 
-export default Certification;
+export default Contact;
