@@ -3,9 +3,7 @@ import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 
 // importing images
-import img1 from "../../assets/service-architechture.JPEG XR";
-import img2 from "../../assets/service-interior.JPEG XR";
-import img3 from "../../assets/how-we-work.JPEG XR";
+
 // importing images
 
 import { Link, useHistory } from "react-router-dom"
@@ -65,13 +63,82 @@ const Contact = (props) => {
                     </div>
                 </div>
             </div>
-            {/* Projects section */}
+            {/* Contact Us section */}
             <div className="container">
-                <h1>Contact Page</h1>
-            </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <div className="row">
+                    <h1 className="text-about-page-title">GET IN TOUCH WITH US</h1>
+                </div>
 
-            <br />
-            <br />
+                <div className="row">
+                    <div className="col-md-4 text-center">
+                        <br /><br />
+                        <i className="fas fa-mobile-alt fa-3x text-success"></i>
+                        <br /><br />
+                        <h6>Phone</h6>
+                        <h6>+92 42 357 74353</h6>
+                        <h6>+92 302 466 6366</h6>
+                        <br /><br />
+                    </div>
+                    <div className="col-md-4 text-center">
+                        <br /><br />
+                        <i className="fas fa-map-marker-alt fa-3x text-danger"></i>
+                        <br /><br />
+                        <h6>Address</h6>
+                        <h6>17 Block E-2, Gulberg-3, Lahore</h6>
+                        <br /><br />
+                    </div>
+                    <div className="col-md-4 text-center">
+                        <br /><br />
+                        <i className="far fa-envelope fa-3x text-primary"></i>
+                        <br /><br />
+                        <h6>Email</h6>
+                        <h6>info@ameradnan.com</h6>
+                        <br /><br />
+                    </div>
+                </div>
+
+                <div className="row">
+                    <h1 className="text-about-page-title w-70p">WOULD YOU LIKE US TO BUILD YOUR NEXT PROJECT? GREAT!</h1>
+
+                    <h6 className="text-center mt-4">Fill this up and we will get back to you as soon as possible. <br /> <br /></h6>
+                    <div className="w-75p mt-4">
+                        <input type="text" placeholder="Name" id="name" className="form-control" />
+                        <br />
+                        <input type="email" placeholder="Email" id="email" className="form-control" />
+                        <br />
+                        <input type="number" placeholder="Phone Number" id="phone" className="form-control" />
+                        <br />
+                        <textarea placeholder="Message" className="form-control w-100p" name="" id="message" rows="10"></textarea>
+                        <br />
+                        <button id="sendbtn" className="btn btn-primary">Send Message</button>
+                        <br /><br /><br /><br />
+                    </div>
+                </div>
+                <h1 className="text-about-page-title">CONNECT WITH US</h1>
+                <br />
+                <div className="text-center">
+                    {/* Facebook */}
+                    <a className="btn btn-primary" id="facebook-btn" href="#!" role="button"><i className="fab fa-facebook-f fa-lg" /></a>
+                    {/* Twitter */}
+                    <a className="btn btn-primary" id="twitter-btn" href="#!" role="button"><i className="fab fa-twitter fa-lg" /></a>
+                    {/* Whatsapp */}
+                    <a className="btn btn-primary" id="whatsapp-btn" href="#!" role="button"><i className="fab fa-whatsapp fa-lg" /></a>
+                    {/* Instagram */}
+                    <a className="btn btn-primary" id="instagram-btn" href="#!" role="button"><i className="fab fa-instagram fa-lg" /></a>
+                    {/* Linkedin */}
+                    <a className="btn btn-primary" id="linkedin-btn" href="#!" role="button"><i className="fab fa-linkedin-in fa-lg" /></a>
+                    {/* Pinterest */}
+                    <a className="btn btn-primary" id="pinterest-btn" href="#!" role="button"><i className="fab fa-pinterest fa-lg" /></a>
+                </div>
+                <br /><br />
+            </div>
+            <br /><br />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3402.726278928045!2d74.44907!3d31.476715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190926aaaaaaab%3A0xef04fa700c084abd!2sTeam%20Overcs%20Architects!5e0!3m2!1sen!2s!4v1621110029864!5m2!1sen!2s" height={500} style={{ border: "0", width: "100%" }} allowFullScreen loading="lazy" />
+            {/* Contact Us Section */}
             <Footer />
             {/* Projects section */}
         </div >
