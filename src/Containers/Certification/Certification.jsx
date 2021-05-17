@@ -73,7 +73,7 @@ const Certification = (props) => {
                 <br />
                 <br />
                 {/* The Content will be placed here for certification */}
-                <div className="row">
+                <div className="row paddingMobile">
                     <div className="col-md-4 col-sm-12 certificationDiv">
                         <figure><img className="imgCertificate" src="http://galleriadesign.pk/images/certificates/1.jpg" /></figure>
                         <p className="text-center mt-3">Certified Professional Engineer Mr. Abdul Rauf Pakistan Engineering Council, 5 Dec, 2000</p>
@@ -88,7 +88,7 @@ const Certification = (props) => {
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="row paddingMobile">
                     <div className="col-md-4 col-sm-12 certificationDiv">
                         <figure><img className="imgCertificate" src="http://galleriadesign.pk/images/certificates/5.jpg" /></figure>
                         <p className="text-center mt-3">Membership Certificate</p>

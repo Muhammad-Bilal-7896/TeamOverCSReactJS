@@ -14,8 +14,8 @@ import '../../css/Services.css';
 
 const Services = (props) => {
     const history = useHistory();
-    const handleRowClick = () => {
-        history.push(`/docs`);
+    const handleRowClick = (e) => {
+        history.push(`/${e}`);
     }
 
     useEffect(() => {
@@ -128,7 +128,7 @@ const Services = (props) => {
             </div>
             <br />
             <div className="projectBlock">
-                <button className="projectBtn">VIEW ALL FEATURED PROJECTS HERE<i class="ml-2 fas fa-chevron-right text-bold"></i></button>
+                <button onClick={() => handleRowClick('projects')} className="projectBtn">VIEW ALL FEATURED PROJECTS HERE<i className="ml-2 fas fa-chevron-right text-bold"></i></button>
             </div>
             <div className="container">
                 <div className="row">

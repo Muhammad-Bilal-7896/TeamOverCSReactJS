@@ -66,6 +66,16 @@
     width: initial !important;
     background-color: #0077b5 !important;
 }
+.gitt
+{
+    color: #0279c0;
+    font-weight: 400;
+    font-size: 20px;
+}
+.gittd
+{
+    font-size: 20.5px;
+}
 
 @media all and (max-width:600px) {
     .w-70p {

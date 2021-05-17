@@ -10,8 +10,8 @@ import '../Styling/Navbar.css';
 
 const Navbar = (props) => {
     const history = useHistory();
-    const handleRowClick = () => {
-        history.push(`/docs`);
+    const handleRowClick = (e) => {
+        history.push(`/${e}`);
     }
 
     useEffect(() => {

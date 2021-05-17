@@ -158,8 +158,8 @@ html:not([data-scroll="0"]) .navbar {
     }
     #navbarSupportedContent {
         margin-left: initial;
-        margin-top: 10%;
-        background: transparent;
+        margin-top: 5%;
+        background: #9a771f;;
         border: 1px solid grey;
         border-radius: 3px;
     }

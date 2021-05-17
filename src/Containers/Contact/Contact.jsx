@@ -70,16 +70,16 @@ const Contact = (props) => {
                 <br />
                 <br />
                 <div className="row">
-                    <h1 className="text-about-page-title">GET IN TOUCH WITH US</h1>
+                    <h1 className="text-about-page-title paddingMobile">GET IN TOUCH WITH US</h1>
                 </div>
 
-                <div className="row">
+                <div className="row paddingMobile">
                     <div className="col-md-4 text-center">
                         <br /><br />
                         <i className="fas fa-mobile-alt fa-3x text-success"></i>
                         <br /><br />
-                        <h6>Phone</h6>
-                        <h6>+92 42 357 74353</h6>
+                        <h6 className="gitt">Phone</h6>
+                        <h6 className="gittd">+92 42 357 74353</h6>
                         <h6>+92 302 466 6366</h6>
                         <br /><br />
                     </div>
@@ -87,21 +87,21 @@ const Contact = (props) => {
                         <br /><br />
                         <i className="fas fa-map-marker-alt fa-3x text-danger"></i>
                         <br /><br />
-                        <h6>Address</h6>
-                        <h6>17 Block E-2, Gulberg-3, Lahore</h6>
+                        <h6 className="gitt">Address</h6>
+                        <h6 className="gittd">17 Block E-2, Gulberg-3, Lahore</h6>
                         <br /><br />
                     </div>
                     <div className="col-md-4 text-center">
                         <br /><br />
                         <i className="far fa-envelope fa-3x text-primary"></i>
                         <br /><br />
-                        <h6>Email</h6>
-                        <h6>info@ameradnan.com</h6>
+                        <h6 className="gitt">Email</h6>
+                        <h6 className="gittd">info@ameradnan.com</h6>
                         <br /><br />
                     </div>
                 </div>
 
-                <div className="row">
+                <div className="row paddingMobile">
                     <h1 className="text-about-page-title w-70p">WOULD YOU LIKE US TO BUILD YOUR NEXT PROJECT? GREAT!</h1>
 
                     <h6 className="text-center mt-4">Fill this up and we will get back to you as soon as possible. <br /> <br /></h6>
@@ -114,7 +114,7 @@ const Contact = (props) => {
                         <br />
                         <textarea placeholder="Message" className="form-control w-100p" name="" id="message" rows="10"></textarea>
                         <br />
-                        <button id="sendbtn" className="btn btn-primary">Send Message</button>
+                        <button id="sendbtn" className="btn btn-primary ml-0">Send Message</button>
                         <br /><br /><br /><br />
                     </div>
                 </div>
@@ -122,17 +122,17 @@ const Contact = (props) => {
                 <br />
                 <div className="text-center">
                     {/* Facebook */}
-                    <a className="btn btn-primary" id="facebook-btn" href="#!" role="button"><i className="fab fa-facebook-f fa-lg" /></a>
+                    <a className="btn btn-primary" id="facebook-btn" href="https://web.facebook.com/Teamovercs.Architects/?_rdc=1&_rdr" role="button"><i className="fab fa-facebook-f fa-lg" /></a>
                     {/* Twitter */}
-                    <a className="btn btn-primary" id="twitter-btn" href="#!" role="button"><i className="fab fa-twitter fa-lg" /></a>
+                    <a className="btn btn-primary" id="twitter-btn" href="https://twitter.com/hashtag/teamovercsarchitects" role="button"><i className="fab fa-twitter fa-lg" /></a>
                     {/* Whatsapp */}
-                    <a className="btn btn-primary" id="whatsapp-btn" href="#!" role="button"><i className="fab fa-whatsapp fa-lg" /></a>
+                    <a className="btn btn-primary" id="whatsapp-btn" href="https://api.whatsapp.com/send/?phone=%2B923094555595&text&app_absent=0" role="button"><i className="fab fa-whatsapp fa-lg" /></a>
                     {/* Instagram */}
-                    <a className="btn btn-primary" id="instagram-btn" href="#!" role="button"><i className="fab fa-instagram fa-lg" /></a>
+                    <a className="btn btn-primary" id="instagram-btn" href="https://www.instagram.com/teamovercs.architects/" role="button"><i className="fab fa-instagram fa-lg" /></a>
                     {/* Linkedin */}
-                    <a className="btn btn-primary" id="linkedin-btn" href="#!" role="button"><i className="fab fa-linkedin-in fa-lg" /></a>
+                    <a className="btn btn-primary" id="linkedin-btn" href="https://pk.linkedin.com/company/team-overcs-architects" role="button"><i className="fab fa-linkedin-in fa-lg" /></a>
                     {/* Pinterest */}
-                    <a className="btn btn-primary" id="pinterest-btn" href="#!" role="button"><i className="fab fa-pinterest fa-lg" /></a>
+                    <a className="btn btn-primary" id="pinterest-btn" href="https://www.pinterest.com/TeamOvercsArchitects/" role="button"><i className="fab fa-pinterest fa-lg" /></a>
                 </div>
                 <br /><br />
             </div>

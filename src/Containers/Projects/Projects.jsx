@@ -13,8 +13,8 @@ import '../../css/Projects.css';
 
 const Projects = (props) => {
     const history = useHistory();
-    const handleRowClick = () => {
-        history.push(`/docs`);
+    const handleRowClick = (e) => {
+        history.push(`/${e}`);
     }
 
     useEffect(() => {
@@ -66,7 +66,7 @@ const Projects = (props) => {
                 </div>
             </div>
             {/* Projects section */}
-            <div className="container">
+            <div className="container paddingMobile">
                 <br />
                 {/* Tabs navs */}
                 <ul className="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
