@@ -15,7 +15,7 @@ class AppRouter extends React.Component {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={AboutUsPage} />
                 <Route exact path="/services" component={Services} />
-                <Route exact path="/projects" component={Projects} />
+                <Route exact path={`projects/${abc}`} component={Projects} />
                 <Route exact path="/certification" component={Certification} />
                 <Route exact path="/contact" component={Contact} />
             </Router>
