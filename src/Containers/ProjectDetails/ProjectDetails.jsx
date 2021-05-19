@@ -86,7 +86,7 @@ const ProjectDetails = (props) => {
                 <br />
 
                 <div className="border">
-                    <ImageGallery items={images} thumbnailPosition="right" />
+                    <ImageGallery items={images} thumbnailPosition="right" autoPlay={true} />
                 </div>
                 <br />
 
@@ -96,7 +96,7 @@ const ProjectDetails = (props) => {
 
                 <div className="border">
                     <div className="container">
-                        <h4 className="mt-2"><b>Description :</b></h4>
+                        <h4 className="mt-3"><b>Description :</b></h4>
                         <p className="discParaPD">A 5 marla hourse created by architects of Team over cs Pakistan. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime beatae impedit cupiditate qui veritatis sint voluptatum quibusdam. Modi amet nam deserunt possimus id, mollitia alias nulla ex, impedit cumque quisquam?</p>
                         <hr />
                         <h4 className="mt-2"><b>Details :</b></h4>

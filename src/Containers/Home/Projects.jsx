@@ -69,9 +69,9 @@ const Projects = (props) => {
                 <div className="card">
                     <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="http://prisma-ksa.com/wp-content/uploads/2017/02/10-2.jpg" alt="Card image cap" className="img-fluid p-img" />
-                        <a href="#!">
+                        <Link to="/project/details">
                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }} />
-                        </a>
+                        </Link>
                     </div>
                     <div className="card-body">
                         <h5 className="card-title">Classical Design | Bahria Town, Lahore</h5>
@@ -79,15 +79,15 @@ const Projects = (props) => {
                         <p className="card-text">
                             A nice blend of classical and modern features!.
                                 </p>
-                        <a href="#" className="btn btn-warning projects-btn">View Project.</a>
+                        <Link to="/project/details" className="btn btn-warning projects-btn">View Project.</Link>
                     </div>
                 </div>
                 <div className="card">
                     <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="http://prisma-ksa.com/wp-content/uploads/2017/02/6-2.jpg" alt="Card image cap" className="img-fluid p-img" />
-                        <a href="#!">
+                        <Link to="/project/details">
                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }} />
-                        </a>
+                        </Link>
                     </div>
                     <div className="card-body">
                         <h5 className="card-title">1 Kanal House Design | DHA, Lahore</h5>
@@ -95,15 +95,15 @@ const Projects = (props) => {
                         <p className="card-text">
                             One Kanal house design having a smart design. A simple and clean house elevation fulfilling both interior and exterior requirements.
                                     </p>
-                        <a href="#" className="btn btn-warning projects-btn">View Project</a>
+                        <Link to="/project/details" className="btn btn-warning projects-btn">View Project</Link>
                     </div>
                 </div>
                 <div className="card">
                     <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="http://prisma-ksa.com/wp-content/uploads/2017/02/1-2.jpg" alt="Card image cap" className="img-fluid p-img" />
-                        <a href="#!">
+                        <Link to="/project/details">
                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }} />
-                        </a>
+                        </Link>
                     </div>
                     <div className="card-body">
                         <h5 className="card-title">House Design | Bahria Town, Lahore</h5>
@@ -111,15 +111,15 @@ const Projects = (props) => {
                         <p className="card-text">
                             One Kanal house design inspired by contemporary Architecture having a unique blend of vertical and horizontal elements.
                                 </p>
-                        <a href="#" className="btn btn-warning projects-btn">View Project</a>
+                        <Link to="/project/details" className="btn btn-warning projects-btn">View Project</Link>
                     </div>
                 </div>
                 <div className="card">
                     <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="http://prisma-ksa.com/wp-content/uploads/2017/02/5-2.jpg" alt="Card image cap" className="img-fluid p-img" />
-                        <a href="#!">
+                        <Link to="/project/details">
                             <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }} />
-                        </a>
+                        </Link>
                     </div>
                     <div className="card-body">
                         <h5 className="card-title">Contemporary Design | DHA, Lahore</h5>
@@ -127,7 +127,7 @@ const Projects = (props) => {
                         <p className="card-text">
                         One Kanal house design following the style of the moment. A clean design depicting the design approach of today but also has the flexibility for the future.
                                 </p>
-                        <a href="#" className="btn btn-warning projects-btn">View Project</a>
+                        <Link to="/project/details" className="btn btn-warning projects-btn">View Project</Link>
                     </div>
                 </div>
             </Carousel>
