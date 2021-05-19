@@ -21,7 +21,7 @@ const Home = (props) => {
         <div>
             <div className="container">
                 <div className="fixed-top">
-                    <Navbar />
+                    <Navbar transparent={true} />
                 </div>
             </div>
 
