@@ -3,18 +3,24 @@
     padding-bottom: 70px;
     padding-top: 65px;
 }
-.cd .cr .ct
-{
+
+.cd .cr .ct {
     text-align: center;
 }
-.count
-{
+
+.count {
     font-weight: bold;
     font-size: 60px;
     font-family: serif;
     color: #000;
 }
-.countp
-{
+
+.countp {
     color: #868686;
+}
+
+@media all and (max-width:500px) {
+    .paddingMobileCD {
+        margin: 0 auto !important;
+    }
 }

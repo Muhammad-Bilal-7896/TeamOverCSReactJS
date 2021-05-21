@@ -76,8 +76,8 @@ const ProjectDetails = (props) => {
             <br />
             <div className="container">
                 <div className="linkingPD">
-                    TeamOvercs
-                   <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> Projects
+                    <Link to="/">Home</Link>
+                   <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> <Link to="/projects">Projects</Link>
                    <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> Houses
                    <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> Lahore
                    <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> <span className="text-projectpd">A 5-marla house in DHA</span>
@@ -100,7 +100,8 @@ const ProjectDetails = (props) => {
                         <p className="discParaPD">A 5 marla hourse created by architects of Team over cs Pakistan. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime beatae impedit cupiditate qui veritatis sint voluptatum quibusdam. Modi amet nam deserunt possimus id, mollitia alias nulla ex, impedit cumque quisquam?</p>
                         <hr />
                         <h4 className="mt-2"><b>Details :</b></h4>
-                        <h6 className="discPD d-flex"><i className="fas fa-users mr-2 fa-lg"></i><p>Architects: <span className="discLinkPD">Philip Stejskal Architecture</span></p></h6>
+                        <br />
+                        <h6 className="discPD d-flex mt-0"><i className="fas fa-users mr-2 fa-lg"></i><p>Architects: <span className="discLinkPD">Philip Stejskal Architecture</span></p></h6>
                         <h6 className="discPD d-flex"><i className="fas fa-chart-area mr-2 fa-lg"></i>&nbsp;<p>Area: <span className="discLinkPD">200</span>m²</p></h6>
                         <h6 className="discPD d-flex"><i className="far fa-calendar-alt mr-2 fa-lg"></i>&nbsp;&nbsp;<p>Year: <span className="discLinkPD">2020</span></p></h6>
                         <h6 className="discPD d-flex"><i className="fas fa-camera-retro mr-2 fa-lg"></i>&nbsp;<p>Photographs: <span className="discLinkPD">Bo Wong</span></p></h6>

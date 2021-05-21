@@ -62,11 +62,13 @@
         top: 40%;
     }
 }
+
 @media all and (max-width:750px) {
     .caption {
         top: 30%;
     }
 }
+
 @media all and (max-width:650px) {
     .caption {
         top: 25%;
@@ -88,6 +90,9 @@
 @media all and (max-width:380px) {
     .projectBtn {
         font-size: 20px;
+    }
+    .paddingMobileServices {
+        margin-left: 5% !important;
     }
 }
 

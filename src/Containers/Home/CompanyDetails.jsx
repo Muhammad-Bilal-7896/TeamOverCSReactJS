@@ -22,7 +22,7 @@ const CompanyDetails = (props) => {
             {/* Company Details */}
             <section className="cd">
                 <div className="container">
-                    <div className="row cr">
+                    <div className="row cr paddingMobileCD">
                         <div className="col-sm-4 ct">
                             <h1 className="count">
                                 <CountUp start={0} end={9} delay={0} duration={3}>

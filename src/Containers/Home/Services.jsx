@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 //Importing images
 import img1 from "../../assets/architecture.JPEG XR";
@@ -9,6 +9,7 @@ import img3 from "../../assets/construction.JPEG XR";
 import '../../Styling/Services.css';
 
 function Services() {
+
     return (
         <div>
             <br />
@@ -22,7 +23,7 @@ function Services() {
                         <br/>
                         <p className="s-para">World-class architectural commercial and residential solutions tailored to your needs.</p>
                         <br/>
-                        <div className="row text-center">
+                        <div className="row text-center paddingMobileServices">
                             <div className="col-md-4 col-lg-4 col-sm-4 col-xs-4">
                                 <img src={img1} alt="Architecture"/>
                                 <h2>Architecture</h2>
