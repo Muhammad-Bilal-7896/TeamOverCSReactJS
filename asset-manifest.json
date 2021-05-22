@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/TeamOverCSReactJS/static/css/main.58cecdf8.chunk.css",
+    "main.js": "/TeamOverCSReactJS/static/js/main.52ed5300.chunk.js",
+    "main.js.map": "/TeamOverCSReactJS/static/js/main.52ed5300.chunk.js.map",
+    "runtime-main.js": "/TeamOverCSReactJS/static/js/runtime-main.2009bbac.js",
+    "runtime-main.js.map": "/TeamOverCSReactJS/static/js/runtime-main.2009bbac.js.map",
+    "static/css/2.623501fb.chunk.css": "/TeamOverCSReactJS/static/css/2.623501fb.chunk.css",
+    "static/js/2.96966ae2.chunk.js": "/TeamOverCSReactJS/static/js/2.96966ae2.chunk.js",
+    "static/js/2.96966ae2.chunk.js.map": "/TeamOverCSReactJS/static/js/2.96966ae2.chunk.js.map",
+    "index.html": "/TeamOverCSReactJS/index.html",
+    "static/css/2.623501fb.chunk.css.map": "/TeamOverCSReactJS/static/css/2.623501fb.chunk.css.map",
+    "static/css/main.58cecdf8.chunk.css.map": "/TeamOverCSReactJS/static/css/main.58cecdf8.chunk.css.map",
+    "static/js/2.96966ae2.chunk.js.LICENSE.txt": "/TeamOverCSReactJS/static/js/2.96966ae2.chunk.js.LICENSE.txt",
+    "static/media/architecture.83a9129a.JPEG XR": "/TeamOverCSReactJS/static/media/architecture.83a9129a.JPEG XR",
+    "static/media/mdb.css": "/TeamOverCSReactJS/static/media/arrow_right.0897f985.svg",
+    "static/media/construction.89bd8abd.JPEG XR": "/TeamOverCSReactJS/static/media/construction.89bd8abd.JPEG XR",
+    "static/media/all.min.css": "/TeamOverCSReactJS/static/media/fa-solid-900.efbd5d20.eot",
+    "static/media/how-we-work.6a99cf7a.JPEG XR": "/TeamOverCSReactJS/static/media/how-we-work.6a99cf7a.JPEG XR",
+    "static/media/interior.9f2215af.JPEG XR": "/TeamOverCSReactJS/static/media/interior.9f2215af.JPEG XR",
+    "static/media/logo copy.b8459620.png": "/TeamOverCSReactJS/static/media/logo copy.b8459620.png",
+    "static/media/logo.ead19f14.JPEG XR": "/TeamOverCSReactJS/static/media/logo.ead19f14.JPEG XR",
+    "static/media/styles.css": "/TeamOverCSReactJS/static/media/revicons.e8746a62.woff",
+    "static/media/service-architechture.07ef3770.JPEG XR": "/TeamOverCSReactJS/static/media/service-architechture.07ef3770.JPEG XR",
+    "static/media/service-interior.a573703a.JPEG XR": "/TeamOverCSReactJS/static/media/service-interior.a573703a.JPEG XR",
+    "static/media/what-we-do.4f23c8b9.JPEG XR": "/TeamOverCSReactJS/static/media/what-we-do.4f23c8b9.JPEG XR",
+    "static/media/who-we-are.08e2c63d.JPEG XR": "/TeamOverCSReactJS/static/media/who-we-are.08e2c63d.JPEG XR"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2009bbac.js",
+    "static/css/2.623501fb.chunk.css",
+    "static/js/2.96966ae2.chunk.js",
+    "static/css/main.58cecdf8.chunk.css",
+    "static/js/main.52ed5300.chunk.js"
+  ]
+}
