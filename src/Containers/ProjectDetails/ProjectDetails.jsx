@@ -104,7 +104,7 @@ const ProjectDetails = (props) => {
                         <h6 className="discPD d-flex mt-0"><i className="fas fa-users mr-2 fa-lg"></i><p>Architects: <span className="discLinkPD">Philip Stejskal Architecture</span></p></h6>
                         <h6 className="discPD d-flex"><i className="fas fa-chart-area mr-2 fa-lg"></i>&nbsp;<p>Area: <span className="discLinkPD">200</span>m²</p></h6>
                         <h6 className="discPD d-flex"><i className="far fa-calendar-alt mr-2 fa-lg"></i>&nbsp;&nbsp;<p>Year: <span className="discLinkPD">2020</span></p></h6>
-                        <h6 className="discPD d-flex"><i className="fas fa-camera-retro mr-2 fa-lg"></i>&nbsp;<p>Photographs: <span className="discLinkPD">Bo Wong</span></p></h6>
+                        {/* <h6 className="discPD d-flex"><i className="fas fa-camera-retro mr-2 fa-lg"></i>&nbsp;<p>Photographs: <span className="discLinkPD">Bo Wong</span></p></h6> */}
                         <h6 className="discPD d-flex"><i className="fas fa-cube mr-2 fa-lg"></i>&nbsp;<p>Manufacturers: <span className="discLinkPD">Midland Brick,</span>Barestone, CSR Gyprock, Fielders Prominence</p></h6>
                         <h6 className="discPD d-flex"><i className="fas fa-square-full mr-2 fa-lg"></i>&nbsp;<p>Structural Engineering: <span className="discLinkPD">Andreotta Cardenosa Consulting Engineers</span></p></h6>
 
