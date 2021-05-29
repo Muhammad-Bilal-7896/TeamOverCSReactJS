@@ -139,7 +139,7 @@ const Navbar = (props) => {
                                     <Link to="/contact" className="nav-link t-none">CONTACT US</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/cp" className="nav-link t-none">COMPANY PROFILE</Link>
+                                    <Link to="/blog" className="nav-link t-none">BLOG</Link>
                                 </li>
                             </ul>
                             {/* Left links */}
@@ -154,13 +154,4 @@ const Navbar = (props) => {
     )
 }
 
-const mapStateToProps = (state) => ({
-    list: state.app.SETTODOLIST,
-})
-
-//updating the data of the state
-const mapDispatchToProp = (dispatch) => ({
-    setTodoList: (data) => dispatch(setTodoList(data)),
-})
-//updating the data of the state
-export default connect(mapStateToProps, mapDispatchToProp)(Navbar);
+export default Navbar;

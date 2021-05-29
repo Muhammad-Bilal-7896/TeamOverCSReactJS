@@ -1,18 +1,29 @@
-const setTodoList = (data) => {
-      console.log("kuch dekhta hai kaka==>",data)
-      return (dispatch) => {
-          dispatch({ type: "SETTODOLIST", data: data })
-      }
-}
+import firebase from '../../firebase/index';
 
-const setCurrentSubListKey =(key) =>{
-    console.log("The selected category is : ",key)
-    return (dispatch)=>{
-        dispatch({type:"SETCURRENTSUBLISTKEY",data:key})
+const setCurrentKey = (data) => {
+    console.log("Hello I am here The key is: ", data);
+    return (dispatch) => {
+        dispatch({ type: "SETCURRENTKEY", data: data })
     }
 }
 
+const get_Blog_all_data = () => {
+    return (dispatch) => {
+        let users = [];
+        firebase.database().ref(`Projects/`).on('value', (snapshot) => {
+            snapshot.forEach(function (data) {
+                console.log("Haaha=>",data.val())
+                users.push(data.val())
+            })
+            dispatch({ type: "GETBLOGDATA", data: users }) 
+            //console.log(users)
+        })        
+    }
+}
+
+
+
 export {
-    setTodoList,
-    setCurrentSubListKey
+    get_Blog_all_data,
+    setCurrentKey
 }

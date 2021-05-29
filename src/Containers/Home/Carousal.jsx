@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { connect } from "react-redux";
-import { setTodoList } from '../../store/action/index';
-
 import { Link, useHistory } from "react-router-dom"
 import '../../Styling/Carousal.css';
 
@@ -100,13 +97,4 @@ const Carousal = (props) => {
     )
 }
 
-const mapStateToProps = (state) => ({
-    list: state.app.SETTODOLIST,
-})
-
-//updating the data of the state
-const mapDispatchToProp = (dispatch) => ({
-    setTodoList: (data) => dispatch(setTodoList(data)),
-})
-//updating the data of the state
-export default connect(mapStateToProps, mapDispatchToProp)(Carousal);
+export default Carousal;

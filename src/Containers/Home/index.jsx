@@ -11,9 +11,6 @@ import Testimonials from "./Testimonials";
 import Footer from "../../Components/Footer";
 //Components imported here
 
-import { connect } from "react-redux";
-import { setTodoList } from '../../store/action/index';
-
 import '../../css/Home.css';
 
 const Home = (props) => {
@@ -42,14 +39,4 @@ const Home = (props) => {
         </div>
     )
 }
-
-const mapStateToProps = (state) => ({
-    list: state.app.SETTODOLIST,
-})
-
-//updating the data of the state
-const mapDispatchToProp = (dispatch) => ({
-    setTodoList: (data) => dispatch(setTodoList(data)),
-})
-//updating the data of the state
-export default connect(mapStateToProps, mapDispatchToProp)(Home);
+export default Home;

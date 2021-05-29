@@ -61,13 +61,4 @@ const CompanyDetails = (props) => {
     )
 }
 
-const mapStateToProps = (state) => ({
-    list: state.app.SETTODOLIST,
-})
-
-//updating the data of the state
-const mapDispatchToProp = (dispatch) => ({
-    setTodoList: (data) => dispatch(setTodoList(data)),
-})
-//updating the data of the state
-export default connect(mapStateToProps, mapDispatchToProp)(CompanyDetails);
+export default CompanyDetails;

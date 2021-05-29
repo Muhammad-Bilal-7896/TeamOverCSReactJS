@@ -9,6 +9,7 @@ import Certification from "../Containers/Certification/Certification";
 import Contact from "../Containers/Contact/Contact";
 import ProjectDetails from "../Containers/ProjectDetails/ProjectDetails";
 import Admin from "../Containers/Admin/Admin";
+import Blog from "../Containers/Blog/Blog";
 
 class AppRouter extends React.Component {
     render() {
@@ -20,6 +21,7 @@ class AppRouter extends React.Component {
                 <Route exact path="/projects" component={Projects} />
                 <Route exact path="/certification" component={Certification} />
                 <Route exact path="/contact" component={Contact} />
+                <Route exact path="/blog" component={Blog} />
                 <Route path="/admin" component={Admin} />
                 <Route path="/project/details" component={ProjectDetails} />        
             </Router>

@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 
-import { Link, useHistory } from "react-router-dom"
+import firebase from "../../firebase/index";
+
 import '../../css/ProjectDetails.css';
+
+import { Link } from "react-router-dom";
+
+import { connect } from "react-redux"
+import { get_Blog_all_data } from '../../store/action/index';
 
 import ImageGallery from 'react-image-gallery';
 
@@ -22,43 +28,56 @@ const images = [
     },
 ];
 
-const ProjectDetails = (props) => {
-    const history = useHistory();
-    const handleRowClick = (e) => {
-        history.push(`/${e}`);
-    }
+function ProjectDetails(props) {
+
+    const [projectsData, setprojectsData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [slideShowArray,setSlideShowArray] = useState([
+        {
+            original: '',
+            thumbnail: ''
+        }
+    ]);
+
+    const [key, setKey] = useState(0);
 
     useEffect(() => {
-        // The debounce function receives our function as a parameter
-        const debounce = (fn) => {
-            // This holds the requestAnimationFrame reference, so we can cancel it if we wish
-            let frame;
-            // The debounce function returns a new function that can receive a variable number of arguments
-            return (...params) => {
-                // If the frame variable has been defined, clear it now, and queue for next frame
-                if (frame) {
-                    cancelAnimationFrame(frame);
+        let jobData = [];
+
+        //Taking data from job vacancy form
+        firebase.database().ref(`Projects/`).on('value', (snapshot) => {
+            snapshot.forEach(function (data) {
+                jobData.push(data.val())
+                console.log(data.val())
+            })
+
+            console.log("TTTT", jobData);
+
+            var tempArraySlideShow = [];
+
+            for (let i = 0; i < jobData[props.SET_KEY].ImageURLArray.length; i++) {
+                let tempObj = {
+                    original: jobData[props.SET_KEY].ImageURLArray[i],
+                    thumbnail: jobData[props.SET_KEY].ImageURLArray[i]
                 }
-                // Queue our function call for the next frame
-                frame = requestAnimationFrame(() => {
-                    // Call our function and pass any params we received
-                    fn(...params);
-                });
+                tempArraySlideShow.push(tempObj);
             }
-        };
 
-        // Reads out the scroll position and stores it in the data attribute
-        // so we can use it in our stylesheets
-        const storeScroll = () => {
-            document.documentElement.dataset.scroll = window.scrollY;
-        }
+            console.log("Barkhudar Dekho ghour se==>", tempArraySlideShow);
 
-        // Listen for new scroll events, here we debounce our `storeScroll` function
-        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+            setKey(props.SET_KEY);
 
-        // Update scroll position for first time
-        storeScroll();
-    })
+            setSlideShowArray(tempArraySlideShow);
+
+            setLoading(false);
+            setprojectsData(jobData);
+
+        })
+    }, [])
+
+    function createMarkup() {
+        return {__html: 'First &middot; Second'};
+    }
 
     return (
         <div>
@@ -77,45 +96,52 @@ const ProjectDetails = (props) => {
             <div className="container">
                 <div className="linkingPD">
                     <Link to="/">Home</Link>
-                   <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> <Link to="/projects">Projects</Link>
-                   <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> Houses
+                    <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> <Link to="/projects">Projects</Link>
+                    <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> Houses
                    <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> Lahore
                    <i className="fas fa-angle-right text-gray ml-3 mr-2"></i> <span className="text-projectpd">A 5-marla house in DHA</span>
                 </div>
-                <h1 className="projectTitlepd">Macdonald Road House / Philip Stejskal Architecture</h1>
-                <br />
 
-                <div className="border">
-                    <ImageGallery items={images} thumbnailPosition="right" autoPlay={true} />
-                </div>
-                <br />
-
-                <h6>Curated by <b>Hana Abdel</b></h6>
-
-                <br />
-
-                <div className="border">
-                    <div className="container">
-                        <h4 className="mt-3"><b>Description :</b></h4>
-                        <p className="discParaPD">A 5 marla hourse created by architects of Team over cs Pakistan. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime beatae impedit cupiditate qui veritatis sint voluptatum quibusdam. Modi amet nam deserunt possimus id, mollitia alias nulla ex, impedit cumque quisquam?</p>
-                        <hr />
-                        <h4 className="mt-2"><b>Details :</b></h4>
+                {(loading) ? (
+                    <h1 className="border text-center">Loading</h1>
+                ) : (
+                    <div>
+                        <h1 className="projectTitlepd">{projectsData[key].Title}</h1>
                         <br />
-                        <h6 className="discPD d-flex mt-0"><i className="fas fa-users mr-2 fa-lg"></i><p>Architects: <span className="discLinkPD">Philip Stejskal Architecture</span></p></h6>
-                        <h6 className="discPD d-flex"><i className="fas fa-chart-area mr-2 fa-lg"></i>&nbsp;<p>Area: <span className="discLinkPD">200</span>m²</p></h6>
-                        <h6 className="discPD d-flex"><i className="far fa-calendar-alt mr-2 fa-lg"></i>&nbsp;&nbsp;<p>Year: <span className="discLinkPD">2020</span></p></h6>
-                        {/* <h6 className="discPD d-flex"><i className="fas fa-camera-retro mr-2 fa-lg"></i>&nbsp;<p>Photographs: <span className="discLinkPD">Bo Wong</span></p></h6> */}
-                        <h6 className="discPD d-flex"><i className="fas fa-cube mr-2 fa-lg"></i>&nbsp;<p>Manufacturers: <span className="discLinkPD">Midland Brick,</span>Barestone, CSR Gyprock, Fielders Prominence</p></h6>
-                        <h6 className="discPD d-flex"><i className="fas fa-square-full mr-2 fa-lg"></i>&nbsp;<p>Structural Engineering: <span className="discLinkPD">Andreotta Cardenosa Consulting Engineers</span></p></h6>
 
-                        <h6 className="discPD ml-4 d-flex">&nbsp;&nbsp;&nbsp;<p> Landscape Architect: <span className="discLinkPD">Annghi Tran Landscape Architecture Studio</span></p></h6>
-                        <h6 className="discPD ml-4 d-flex">&nbsp;&nbsp;&nbsp;<p> Project Architects: <span className="discLinkPD">Louise Allen, Julia Kiefer, Jaime Mayger, Philip Stejskal</span></p></h6>
-                        <h6 className="discPD ml-4 d-flex">&nbsp;&nbsp;&nbsp;<p> City: <span className="discLinkPD">Applecross</span></p></h6>
-                        <h6 className="discPD ml-4 d-flex">&nbsp;&nbsp;&nbsp;<p> Country: <span className="discLinkPD">Australia</span></p></h6>
-                        <h6 className="discPD d-flex"><i className="fas fa-compass mr-2 fa-lg"></i>&nbsp;&nbsp;<p> Project Location:</p></h6>
-                        <iframe id="mappd" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3402.726278928045!2d74.44907!3d31.476715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190926aaaaaaab%3A0xef04fa700c084abd!2sTeam%20Overcs%20Architects!5e0!3m2!1sen!2s!4v1621110029864!5m2!1sen!2s" allowFullScreen loading="eager" />
+                        <div className="border">
+                            <ImageGallery items={slideShowArray} thumbnailPosition="right" autoPlay={true} />
+                        </div>
+                        <br />
+
+                        <h6>Curated by <b>Hana Abdel</b></h6>
+
+                        <br />
+
+                        <div className="border">
+                            <div className="container">
+                                <h4 className="mt-3"><b>Description :</b></h4>
+                                <p dangerouslySetInnerHTML={{__html:projectsData[key].Description}} className="discParaPD"/>
+                                <hr />
+                                <h4 className="mt-2"><b>Details :</b></h4>
+                                <br />
+                                <h6 className="discPD d-flex mt-0"><i className="fas fa-users mr-2 fa-lg"></i><p>Architects: <span className="discLinkPD">{projectsData[key].Architects}</span></p></h6>
+                                <h6 className="discPD d-flex"><i className="fas fa-chart-area mr-2 fa-lg"></i>&nbsp;<p>Area: <span className="discLinkPD">{projectsData[key].Area} </span>m²</p></h6>
+                                <h6 className="discPD d-flex"><i className="far fa-calendar-alt mr-2 fa-lg"></i>&nbsp;&nbsp;<p>Year: <span className="discLinkPD">{projectsData[key].CompletionDate}</span></p></h6>
+                                {/* <h6 className="discPD d-flex"><i className="fas fa-camera-retro mr-2 fa-lg"></i>&nbsp;<p>Photographs: <span className="discLinkPD">Bo Wong</span></p></h6> */}
+                                <h6 className="discPD d-flex"><i className="fas fa-cube mr-2 fa-lg"></i>&nbsp;<p>Manufacturers: <span className="discLinkPD">{projectsData[key].Manufacturers}</span></p></h6>
+                                <h6 className="discPD d-flex"><i className="fas fa-square-full mr-2 fa-lg"></i>&nbsp;<p>Structural Engineering: <span className="discLinkPD">{projectsData[key].StructuralEngineers}</span></p></h6>
+
+                                <h6 className="discPD ml-4 d-flex">&nbsp;&nbsp;&nbsp;<p> Landscape Architect: <span className="discLinkPD">{projectsData[key].LandscapeAchitects}</span></p></h6>
+                                <h6 className="discPD ml-4 d-flex">&nbsp;&nbsp;&nbsp;<p> Project Architects: <span className="discLinkPD">{projectsData[key].ProjectArchitects}</span></p></h6>
+                                <h6 className="discPD ml-4 d-flex">&nbsp;&nbsp;&nbsp;<p> City: <span className="discLinkPD">{projectsData[key].City}</span></p></h6>
+                                <h6 className="discPD ml-4 d-flex">&nbsp;&nbsp;&nbsp;<p> Country: <span className="discLinkPD">{projectsData[key].Country}</span></p></h6>
+                                <h6 className="discPD d-flex"><i className="fas fa-compass mr-2 fa-lg"></i>&nbsp;&nbsp;<p> Project Location:</p></h6>
+                                <iframe id="mappd" src={projectsData[key].GoogleMapLink} allowFullScreen loading="lazy" />
+                            </div>
+                        </div>
                     </div>
-                </div>
+                )}
 
             </div>
 
@@ -124,8 +150,16 @@ const ProjectDetails = (props) => {
             <br />
             <Footer />
             {/* Projects section */}
-        </div >
+        </div>
     )
 }
 
-export default ProjectDetails;
+const mapStateToProps = (state) => ({
+    SET_KEY: state.app.SET_KEY,
+    projects_data: state.app.GET_SELL,
+})
+//updating the data of the state
+const mapDispatchToProp = (dispatch) => ({
+    get_Blog_all_data: () => dispatch(get_Blog_all_data()),
+})
+export default connect(mapStateToProps, mapDispatchToProp)(ProjectDetails);
