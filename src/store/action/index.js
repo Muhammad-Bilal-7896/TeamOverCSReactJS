@@ -7,7 +7,7 @@ const setCurrentKey = (data) => {
     }
 }
 
-const get_Blog_all_data = () => {
+const get_all_projects_data = () => {
     return (dispatch) => {
         let users = [];
         firebase.database().ref(`Projects/`).on('value', (snapshot) => {
@@ -15,7 +15,7 @@ const get_Blog_all_data = () => {
                 console.log("Haaha=>",data.val())
                 users.push(data.val())
             })
-            dispatch({ type: "GETBLOGDATA", data: users }) 
+            dispatch({ type: "GET_PROJECTS_DATA", data: users }) 
             //console.log(users)
         })        
     }
@@ -24,6 +24,6 @@ const get_Blog_all_data = () => {
 
 
 export {
-    get_Blog_all_data,
+    get_all_projects_data,
     setCurrentKey
 }

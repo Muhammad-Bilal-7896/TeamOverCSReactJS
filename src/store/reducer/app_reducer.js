@@ -1,6 +1,6 @@
 const INITIAL_STATE = {
   SELL: {},
-  GET_SELL: [],
+  GET_PROJECTS_DATA: [],
   SET_KEY:"",
   SETCONDITION:true
 
@@ -14,20 +14,15 @@ export default (state = INITIAL_STATE, action) => {
         SELL: action.data
       })
 
-    case "GETBLOGDATA":
+    case "GET_PROJECTS_DATA":
       return ({
         ...state,
-        GET_SELL: action.data
+        GET_PROJECTS_DATA: action.data
       })
     case "SETCURRENTKEY":
       return ({
         ...state,
         SET_KEY: action.data
-      })
-      case "SETCONDITION":
-      return ({
-        ...state,
-        SETCONDITION: action.data
       })
   }
   return state;

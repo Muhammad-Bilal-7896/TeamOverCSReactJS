@@ -3,43 +3,15 @@ import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import ProjectsList from "../../Components/ProjectsList";
 
-import firebase from "../../firebase/index";
+import { connect } from "react-redux"
+import { get_all_projects_data } from '../../store/action/index';
 
-// importing images
-import img1 from "../../assets/service-architechture.JPEG XR";
-import img2 from "../../assets/service-interior.JPEG XR";
-import img3 from "../../assets/how-we-work.JPEG XR";
-// importing images
-
-import { Link, useHistory } from "react-router-dom"
 import '../../css/Projects.css';
 
 const Projects = (props) => {
 
-    const [projectsData, setprojectsData] = useState([]);
-
-    const history = useHistory();
-    const handleRowClick = (e) => {
-        history.push(`/${e}`);
-    }
-
     useEffect(() => {
-        let jobData = [];
-
-        //Taking data from job vacancy form
-        firebase.database().ref(`Projects/`).on('value', (snapshot) => {
-            snapshot.forEach(function (data) {
-                jobData.push(data.val())
-                console.log(data.val())
-            })
-
-            console.log(jobData);
-
-            setprojectsData(jobData);
-
-
-
-        })
+        props.get_all_projects_data();
     }, [])
 
     return (
@@ -58,7 +30,8 @@ const Projects = (props) => {
                     </div>
                 </div>
             </div>
-
+            <br />
+          
             {/* Projects section */}
             <div className="container paddingMobile">
                 <br />
@@ -87,14 +60,13 @@ const Projects = (props) => {
 
                         <div>
                             <ul className="portfolio">
-                                {projectsData.map((v, i) => {
+                                {props.projects_data.map((v, i) => {
                                     return <li key={i}>
                                         <ProjectsList
                                             index={i}
                                             ImageURL={v.ImageURLArray[0]}
                                             title={v.Title}
                                             category={v.Category}
-                                            projectsData={projectsData}
                                         />
                                     </li>
                                 })}
@@ -105,7 +77,7 @@ const Projects = (props) => {
                     <div className="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
                         <div>
                             <ul className="portfolio">
-                                {projectsData.map((v, i) => {
+                                {props.projects_data.map((v, i) => {
                                     return <li key={i}>
                                         <figure>
                                             {(v.Category == "Commercial Exterior") ? (
@@ -129,7 +101,7 @@ const Projects = (props) => {
                     <div className="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
                         <div>
                             <ul className="portfolio">
-                                {projectsData.map((v, i) => {
+                                {props.projects_data.map((v, i) => {
                                     return <li key={i}>
                                         <figure>
                                             {(v.Category == "Commercial Interior") ? (
@@ -151,7 +123,7 @@ const Projects = (props) => {
                     <div className="tab-pane fade" id="ex3-tabs-4" role="tabpanel" aria-labelledby="ex3-tab-4">
                         <div>
                             <ul className="portfolio">
-                                {projectsData.map((v, i) => {
+                                {props.projects_data.map((v, i) => {
                                     return <li key={i}>
                                         <figure>
                                             {(v.Category == "Residential Exterior") ? (
@@ -173,7 +145,7 @@ const Projects = (props) => {
                     <div className="tab-pane fade" id="ex3-tabs-5" role="tabpanel" aria-labelledby="ex3-tab-5">
                         <div>
                             <ul className="portfolio">
-                                {projectsData.map((v, i) => {
+                                {props.projects_data.map((v, i) => {
                                     return <li key={i}>
                                         <figure>
                                             {(v.Category == "Residential Interior") ? (
@@ -203,5 +175,11 @@ const Projects = (props) => {
         </div >
     )
 }
-
-export default Projects;
+const mapStateToProps = (state) => ({
+    SET_KEY: state.app.SET_KEY,
+    projects_data: state.app.GET_PROJECTS_DATA
+})
+const mapDispatchToProp = (dispatch) => ({
+    get_all_projects_data: () => dispatch(get_all_projects_data()),
+})
+export default connect(mapStateToProps, mapDispatchToProp)(Projects);
