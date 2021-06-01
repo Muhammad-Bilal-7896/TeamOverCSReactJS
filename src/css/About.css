@@ -32,11 +32,11 @@
 }
 
 .bgimg-1 {
-    background-image: url("http://galleriadesign.pk/images/about_bg.jpg");
-    height: 40vh;
+    background-image: url("http://www.ameradnan.com/wp-content/themes/ameradnan/images/blog-banner-new.jpg");
+    height: 90vh;
     top: 0%;
 }
-.bgimg-1::after
+.bgimg-1::after,.bgimg-2::after, .bgimg-3::after
 {
     content: '';
     position: absolute;
@@ -44,7 +44,7 @@
     height:100%;
     top:0; 
     left:0;
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.2);
     opacity: 1;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -52,7 +52,7 @@
 }
 
 .caption {
-    background-color: rgba(134, 48, 48, 0.13);
+    /* background-color: rgba(134, 48, 48, 0.13); */
     color: #fff;
     padding: 18px;
     font-size: 30px;

@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from "react-redux";
-import { setTodoList } from '../../store/action/index';
+
+import { connect } from "react-redux"
+import { get_all_projects_data,setCurrentKey } from '../../store/action/index';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import { Link } from "react-router-dom"
+import { Link,useHistory } from "react-router-dom"
+
 import '../../Styling/Projects.css';
 
 const Projects = (props) => {
+
+    useEffect(() => {
+        props.get_all_projects_data();
+    }, [])
+
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -26,10 +33,6 @@ const Projects = (props) => {
             slidesToSlide: 1 // optional, default to 1.
         }
     };
-    // const changeKey = (e) => {
-    //     props.setCurrentKey(e);
-    //     console.log("The Key is : ", props.SET_KEY);
-    // }
 
     return (
         <div>
@@ -60,13 +63,34 @@ const Projects = (props) => {
                 customTransition="all .5"
                 transitionDuration={500}
                 containerClass="carousel-container"
-           
+
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
                 autoPlay={true}
                 centerMode={false}
             >
-                <div className="card">
+
+                {props.projects_data.map((v, i) => {
+                    return <div key={i} className="card">
+                        <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src={v.ImageURLArray[0]} height={250} alt="Card image cap" className="img-fluid p-img" />
+                            <Link to="/">
+                                <div className="mask" style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }} />
+                            </Link>
+                        </div>
+                        <div className="card-body">
+                            <h5 className="card-title">{v.Title}</h5>
+                            <p className="text-primary">{v.CompletionDate}</p>
+                            <p className="card-text">
+                                {v.Description}
+                            </p>
+                            <Link to="/project/details" onClick={() => props.setCurrentKey(i)} className="btn btn-warning projects-btn">View Project</Link>
+                        </div>
+                    </div>
+                })}
+
+
+                {/* <div className="card">
                     <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="http://prisma-ksa.com/wp-content/uploads/2017/02/10-2.jpg" alt="Card image cap" className="img-fluid p-img" />
                         <Link to="/project/details">
@@ -78,7 +102,7 @@ const Projects = (props) => {
                         <p className="text-primary">12-23-2019</p>
                         <p className="card-text">
                             A nice blend of classical and modern features!.
-                                </p>
+                        </p>
                         <Link to="/project/details" className="btn btn-warning projects-btn">View Project.</Link>
                     </div>
                 </div>
@@ -125,11 +149,11 @@ const Projects = (props) => {
                         <h5 className="card-title">Contemporary Design | DHA, Lahore</h5>
                         <p className="text-primary">12-23-2019</p>
                         <p className="card-text">
-                        One Kanal house design following the style of the moment. A clean design depicting the design approach of today but also has the flexibility for the future.
+                            One Kanal house design following the style of the moment. A clean design depicting the design approach of today but also has the flexibility for the future.
                                 </p>
                         <Link to="/project/details" className="btn btn-warning projects-btn">View Project</Link>
                     </div>
-                </div>
+                </div> */}
             </Carousel>
 
             <br />
@@ -138,4 +162,12 @@ const Projects = (props) => {
     )
 }
 
-export default Projects;
+const mapStateToProps = (state) => ({
+    SET_KEY: state.app.SET_KEY,
+    projects_data: state.app.GET_PROJECTS_DATA
+})
+const mapDispatchToProp = (dispatch) => ({
+    get_all_projects_data: () => dispatch(get_all_projects_data()),
+    setCurrentKey: (data) => dispatch(setCurrentKey(data)),
+})
+export default connect(mapStateToProps, mapDispatchToProp)(Projects);

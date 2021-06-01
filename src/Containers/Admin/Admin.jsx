@@ -54,8 +54,11 @@ class Admin extends React.Component {
             //For images
             BlogFrontImageURL: "",
             BlogFrontImage: null,
+            FrontParaBlog: "",
             BlogFrontImageProgress: 0,
             BlogAuthor: "",
+            BlogHashTags: "",
+            BlogHashTagsArray: ["#architects", "#bestHouses"],
             showInsertParagraphModal: false,
             showInsertHeadingModal: false,
             showInsertImageModal: false,
@@ -90,8 +93,7 @@ class Admin extends React.Component {
     }
 
     componentDidUpdate = () => {
-        //console.log("Idhar dekh aik chez cdu mein ==>",this.state.ImageURLArray);
-        console.log("Idhar dekh aik chez cdu mein ==>", this.state.ImageURLArray);
+        console.log("Idhar dekh aik chez cdu mein ==>", this.state.BlogHashTagsArray);
     }
 
     setProjectCategoryFunction = (e) => {
@@ -242,7 +244,7 @@ class Admin extends React.Component {
 
         completionDate = completionDate.toString();
 
-        var key = firebase.database().ref('Projects/').push().key;
+        let key = firebase.database().ref('Projects/').push().key;
 
         let Data = {
             Title: this.state.title,
@@ -262,6 +264,10 @@ class Admin extends React.Component {
             Key: key,
             timeSubmitted: dateTime
         }
+
+
+        firebase.database().ref(`Projects/`).push(Data)
+            .then(alert("Your Project is Submitted Successfully."))
 
         this.setState({
             // Here the important attributes start
@@ -286,9 +292,45 @@ class Admin extends React.Component {
 
         this.globalImageURLArray = [];
 
+    }
 
-        firebase.database().ref(`Projects/`).push(Data)
-            .then(alert("Your Project is Submitted Successfully."))
+    sendDataBlog = () => {
+        ////////////////////////////To take the current date and time//////////////////////////////////
+        let today = new Date();
+        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let dateTime = date + ' ' + time;
+        dateTime = dateTime.toString();
+        ////////////////////////////To take the current date and time//////////////////////////////////
+
+        let key = firebase.database().ref('Blogs/').push().key;
+
+        let Data = {
+            BlogTitle: this.state.BlogTitle,
+            BlogCategory: this.state.BlogCategory,
+            BlogDescription: this.state.BlogDescription,
+            BlogCoverImageUrl: this.state.BlogFrontImageURL,
+            BlogCoverPara: this.state.FrontParaBlog,
+            BlogAuthor: this.state.BlogAuthor,
+            BlogSubmissionDate: dateTime,
+            BlogHashTagsArray: this.state.BlogHashTagsArray,
+            Key: key,
+        }
+
+        firebase.database().ref(`Blogs/`).push(Data)
+            .then(alert("Your Blog is Submitted Successfully."))
+
+        this.setState({
+            // Here the important attributes start
+            BlogTitle: "",
+            BlogCategory: "",
+            BlogDescription: "",
+            BlogFrontImageURL: "",
+            FrontParaBlog: "",
+            BlogAuthor: "",
+            BlogHashTagsArray: [],
+            BlogFrontImageProgress:0
+        })
 
     }
 
@@ -718,8 +760,6 @@ class Admin extends React.Component {
                                                                                 <button type="button" className="btn-close" onClick={() => this.setState({ showInsertImageModal: false })} data-mdb-dismiss="modal" aria-label="Close" />
                                                                             </div>
                                                                             <div className="modal-body">
-
-
                                                                                 <ol>
                                                                                     <li>
 
@@ -728,7 +768,6 @@ class Admin extends React.Component {
                                                                                         <br />
                                                                                         <h5 className="text-center">OR <i className="fas fa-info-circle"></i></h5>
                                                                                         <br />
-
                                                                                     </li>
                                                                                     <li>
                                                                                         <h3>Upload Image from your Device: </h3>
@@ -754,20 +793,30 @@ class Admin extends React.Component {
                                                                                 <button type="button" onClick={() => this.setState({ showInsertImageModal: false })} className="btn btn-secondary" data-mdb-dismiss="modal">
                                                                                     Close
                                                                              </button>
-                                                                                <button type="button" onClick={() => this.setState({
-                                                                                    BlogDescription: this.state.BlogDescription + `<img class="img-fluid" src="${this.state.TempBlogImageURL}" alt="${this.state.TempBlogImageALT}" title="${this.state.TempBlogImageTitle}">${this.state.TempHeadingsBlog}<p>`,
-                                                                                    TempHeadingsBlog: "",
-                                                                                    showInsertImageModal: false,
-                                                                                    TempBlogImageURL:"",
-                                                                                    TempBlogImageTitle:"",
-                                                                                    TempBlogImageALT:"",
-                                                                                    BlogTempImageProgress:0
-                                                                                })}
-                                                                                    data-mdb-dismiss="modal"
-                                                                                    aria-label="Insert"
-                                                                                    className="btn btn-primary"
-                                                                                >Insert
-                                                                            </button>
+                                                                                {(this.state.TempBlogImageURL == "") ? (
+                                                                                    <button type="button"
+                                                                                        disabled={true}
+                                                                                        className="btn btn-primary"
+                                                                                    >Insert
+                                                                                    </button>
+                                                                                ) : (
+                                                                                    <button type="button" onClick={() => this.setState({
+                                                                                        BlogDescription: this.state.BlogDescription + `<img class="img-fluid" src="${this.state.TempBlogImageURL}" alt="${this.state.TempBlogImageALT}" title="${this.state.TempBlogImageTitle}" /> <br/>`,
+                                                                                        TempHeadingsBlog: "",
+                                                                                        showInsertImageModal: false,
+                                                                                        TempBlogImageURL: "",
+                                                                                        TempBlogImageTitle: "",
+                                                                                        TempBlogImageALT: "",
+                                                                                        BlogTempImageProgress: 0
+                                                                                    })}
+                                                                                        data-mdb-dismiss="modal"
+                                                                                        aria-label="Insert"
+                                                                                        className="btn btn-primary"
+                                                                                    >Insert
+                                                                                    </button>
+                                                                                )}
+
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -779,7 +828,8 @@ class Admin extends React.Component {
                                                             {/* Modal */}
 
                                                             {/* Here all the formatting will be done */}
-                                                            <div className="border d-flex">
+
+                                                            <div className="border buttonsBlockBlogFormatting">
                                                                 <button
                                                                     data-mdb-toggle="modal"
                                                                     data-mdb-target="#exampleModal"
@@ -846,21 +896,55 @@ class Admin extends React.Component {
                                                             <br />
 
                                                             <div>
-                                                                <h3>Enter the Author of the Blog : <span className="text-red">*</span></h3>
-                                                                <input type="text" placeholder="Eg: Philip Stejskal Architecture,Ali Imran etc" value={this.state.architects} onChange={(e) => this.setState({ architects: e.target.value })} className="form-control title" aria-label="..." />
+                                                                <h3>Enter the Cover Para of the Blog : <span className="text-red">*</span></h3>
+                                                                <textarea name="" cols="70" rows="10" className="form-control paraAdmin" placeholder="Write the Cover paragraph for the Blog" value={this.state.FrontParaBlog} onChange={(e) => this.setState({ FrontParaBlog: e.target.value })}></textarea>
                                                             </div>
 
                                                             <br />
 
-                                                            {(this.state.title == "" || this.state.category == "" || this.state.disc == "" || this.state.architects == "" || this.state.area == 0 || this.state.manufacturers == "" || this.state.StructuralEngineers == "" || this.state.LandscapeAchitects == "" || this.state.ProjectArchitects == "" || this.state.City == "" || this.state.Country == "" || this.state.GoogleMapLink == "" || this.state.ImageURLArray.length == 0) ? (
+                                                            <div>
+                                                                <h3>Enter the Author of the Blog : <span className="text-red">*</span></h3>
+                                                                <input type="text" placeholder="Eg: Philip Stejskal Architecture,Ali Imran etc" value={this.state.BlogAuthor} onChange={(e) => this.setState({ BlogAuthor: e.target.value })} className="form-control title" aria-label="..." />
+                                                            </div>
+
+                                                            <br />
+
+                                                            <div>
+                                                                <h3>Enter the Hashtags of the Blog : <span className="text-red">*</span></h3>
+                                                                <input type="text" placeholder="Eg: //#endregion etc" value={this.state.BlogHashTags} onChange={(e) => this.setState({ BlogHashTags: e.target.value })} className="form-control title" aria-label="..." />
+                                                                <button className="btn btn-primary mt-3 mb-3" onClick={() => this.setState({
+                                                                    BlogHashTagsArray: [...this.state.BlogHashTagsArray, this.state.BlogHashTags],
+                                                                    BlogHashTags: ""
+                                                                })}>Insert</button>
+
+                                                                <br />
+
+
+                                                                {this.state.BlogHashTagsArray.map((v, i) => {
+                                                                    return <li key={i} style={{ display: "inline-block", listStyle: "none" }}>
+                                                                        <div>
+                                                                            {/* Here the loop div is here */}
+                                                                            <a href={`blog/${v}`} className="border ml-2 mt-2 hastagsBlog">{v}</a>
+                                                                            {/* Here the loop div is here */}
+                                                                        </div>
+
+                                                                    </li>
+                                                                })}
+
+                                                                <h4 className="border mt-2" dangerouslySetInnerHTML={{ __html: this.state.BlogHashTags }} />
+                                                            </div>
+
+                                                            <br />
+
+                                                            {(this.state.BlogTitle == "" || this.state.BlogCategory == "" || this.state.BlogDescription == "" || this.state.BlogFrontImageURL == "" || this.state.BlogAuthor == "" || this.state.FrontParaBlog == "" || this.state.BlogHashTagsArray.length <= 2) ? (
                                                                 <div>
                                                                     <h4 className="text-red">Please fill all the fields indicated as necessary with * sign to submit</h4>
                                                                     <button disabled={true} className="btn btn-success btn-block">Submit</button>
                                                                 </div>
                                                             ) : (
                                                                 <div>
-                                                                    <h4 className="mt-2">You are ready to post the Project.</h4>
-                                                                    <button className="btn btn-success btn-block" onClick={this.sendDataProject}>Submit</button>
+                                                                    <h4 className="mt-2">You are ready to post the Blog.</h4>
+                                                                    <button className="btn btn-success btn-block" onClick={this.sendDataBlog}>Submit</button>
                                                                 </div>
                                                             )}
                                                             <br />

@@ -105,10 +105,12 @@ const Projects = (props) => {
                                     return <li key={i}>
                                         <figure>
                                             {(v.Category == "Commercial Interior") ? (
-                                                <div>
-                                                    <img src={v.ImageURLArray[0]} />
-                                                    <h3 className="InfoBlock">{v.Title}<br /><span className="info"> {v.Category} </span></h3><figcaption><a href="#res-e8" id="fp">+</a></figcaption>
-                                                </div>
+                                               <ProjectsList
+                                               index={i}
+                                               ImageURL={v.ImageURLArray[0]}
+                                               title={v.Title}
+                                               category={v.Category}
+                                           />
                                             ) : (
                                                 <div>
                                                     <span></span>
@@ -127,10 +129,12 @@ const Projects = (props) => {
                                     return <li key={i}>
                                         <figure>
                                             {(v.Category == "Residential Exterior") ? (
-                                                <div>
-                                                    <img src={v.ImageURLArray[0]} />
-                                                    <h3 className="InfoBlock">{v.Title}<br /><span className="info"> {v.Category} </span></h3><figcaption><a href="#res-e8" id="fp">+</a></figcaption>
-                                                </div>
+                                               <ProjectsList
+                                               index={i}
+                                               ImageURL={v.ImageURLArray[0]}
+                                               title={v.Title}
+                                               category={v.Category}
+                                           />
                                             ) : (
                                                 <div>
                                                     <span></span>
@@ -149,10 +153,12 @@ const Projects = (props) => {
                                     return <li key={i}>
                                         <figure>
                                             {(v.Category == "Residential Interior") ? (
-                                                <div>
-                                                    <img src={v.ImageURLArray[0]} />
-                                                    <h3 className="InfoBlock">{v.Title}<br /><span className="info"> {v.Category} </span></h3><figcaption><a href="#res-e8" id="fp">+</a></figcaption>
-                                                </div>
+                                                <ProjectsList
+                                                index={i}
+                                                ImageURL={v.ImageURLArray[0]}
+                                                title={v.Title}
+                                                category={v.Category}
+                                            />
                                             ) : (
                                                 <div>
                                                     <span></span>
