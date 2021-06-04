@@ -13,7 +13,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 import history from './history'
 
-ReactDOM.render(
+ReactDOM.hydrate(
     <Provider store={store}>
         <Router history={history}>
         <App />

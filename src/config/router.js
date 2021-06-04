@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Route  } from "react-router-dom";
+import { Router, Route,Switch  } from "react-router-dom";
 
 import Home from '../Containers/Home/index';
 import AboutUsPage from '../Containers/About/AboutUsPage';
@@ -14,7 +14,7 @@ import Blog from "../Containers/Blog/Blog";
 class AppRouter extends React.Component {
     render() {
         return (
-            <Router>
+            <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={AboutUsPage} />
                 <Route exact path="/services" component={Services} />
@@ -24,7 +24,7 @@ class AppRouter extends React.Component {
                 <Route exact path="/blog" component={Blog} />
                 <Route path="/admin" component={Admin} />
                 <Route path="/project/details" component={ProjectDetails} />        
-            </Router>
+            </Switch>
         )
     }
 }

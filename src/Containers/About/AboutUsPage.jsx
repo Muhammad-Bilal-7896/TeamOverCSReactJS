@@ -4,9 +4,9 @@ import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 
 // importing images
-import img1 from "../../assets/who-we-are.JPEG XR";
-import img2 from "../../assets/what-we-do.JPEG XR";
-import img3 from "../../assets/how-we-work.JPEG XR";
+import img1 from "../../assets/who-we-are.png";
+import img2 from "../../assets/what-we-do.png";
+import img3 from "../../assets/how-we-work.png";
 // importing images
 
 import { Link, useHistory } from "react-router-dom"

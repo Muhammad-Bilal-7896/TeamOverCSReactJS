@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 import { setTodoList } from '.././store/action/index';
 
-import logo from "../assets/logo.JPEG XR";
+import logo from "../assets/logo1.png";
 
 import { Link, useHistory } from "react-router-dom"
 import '../Styling/Navbar.css';

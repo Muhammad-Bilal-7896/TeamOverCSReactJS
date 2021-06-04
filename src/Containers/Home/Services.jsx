@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
 //Importing images
-import img1 from "../../assets/architecture.JPEG XR";
-import img2 from "../../assets/interior.JPEG XR";
-import img3 from "../../assets/construction.JPEG XR";
+import img1 from "../../assets/architecture.png";
+import img2 from "../../assets/interior.png";
+import img3 from "../../assets/construction.png";
 //Importing images
 
 import '../../Styling/Services.css';

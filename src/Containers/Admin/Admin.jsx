@@ -466,7 +466,7 @@ class Admin extends React.Component {
                                                                 <span className="input-group-addon glyphicon glyphicon-search" id="sizing-addon2"></span>
 
                                                                 <select style={{ fontSize: "15px", width: "200px" }} value={this.state.category}
-                                                                    onChange={(e) => this.setCategoryFunction(e)} className="form-control">
+                                                                    onChange={(e) => this.setProjectCategoryFunction(e)} className="form-control">
                                                                     <option value="Commercial Exterior">Commercial Exterior</option>
                                                                     <option value="Commercial Interior">Commercial Interior</option>
                                                                     <option value="Residential Exterior">Residential Exterior</option>

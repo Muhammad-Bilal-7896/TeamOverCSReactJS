@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.JPEG XR";
+import logo from "../assets/logo1.png";
 import "../Styling/Footer.css";
 
 export default class Testimonials extends React.PureComponent {
