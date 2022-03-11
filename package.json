@@ -1,5 +1,5 @@
 {
-  "name": "TeamOverCSArc",
+  "name": "Teamovercsarchi_backend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,10 +14,8 @@
     "@types/react": "^16.9.54",
     "@types/react-dom": "^16.9.9",
     "@types/react-redux": "^7.1.9",
-    "express": "^4.17.1",
     "firebase": "^8.6.2",
     "history": "^4.0.0",
-    "ignore-styles": "^5.0.1",
     "mdbreact": "^5.0.1",
     "react": "^17.0.1",
     "react-countup": "^4.3.3",
